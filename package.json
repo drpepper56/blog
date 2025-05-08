@@ -6,8 +6,8 @@
     "dev": "vite",
     "preview": "vite preview",
     "build": "tsc && vite build",
-    "start": "node dist/server/index.js",
-    "heroku-postbuild": "npm run build"
+    "start": "node dist/index.js",
+    "hdp": "git add . && git commit -m 'heroku deploy testing in production hhihihihihihi' && git push heroku main"
   },
   "repository": {
     "type": "git",
