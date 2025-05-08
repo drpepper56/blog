@@ -31,5 +31,8 @@ export default defineConfig({
   },
   preview: {
     port: process.env.PORT ? parseInt(process.env.PORT) : 3000,
+    allowedHosts: [
+        'blog.lemoncardboard.uk', // Your custom domain
+      ]
   }
 })
