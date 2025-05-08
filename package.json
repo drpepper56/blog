@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "vite preview --port $PORT",
+    "start": "vite preview --port --host 0.0.0.0 $PORT",
     "heroku-postbuild": "npm install && npm run build",
     "hdp": "git add . && git commit -m 'heroku deploy testing in production hhihihihihihi' && git push heroku main"
   },

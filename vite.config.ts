@@ -26,9 +26,11 @@ export default defineConfig({
     'process.env.NODE_ENV': '"production"' // Inject environment variables
   },
   server: {
+    host: true,
     port: process.env.PORT ? parseInt(process.env.PORT) : 3000,
   },
   preview: {
+    host: true,
     port: process.env.PORT ? parseInt(process.env.PORT) : 3000,
   }
 })
