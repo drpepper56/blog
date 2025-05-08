@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build", 
+    "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "start": "vite preview --port $PORT",
     "heroku-postbuild": "npm install && npm run build",
@@ -27,7 +27,9 @@
   "homepage": "https://github.com/drpepper56/blog#readme",
   "description": "",
   "devDependencies": {
-    "@types/node": "^22.15.16",
+    "@types/node": "^22.15.16"
+  },
+  "dependencies": {
     "typescript": "^5.8.3",
     "vite": "^6.3.5"
   }
