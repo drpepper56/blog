@@ -21,16 +21,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/drpepper56/blog/issues"
-  },
-  "homepage": "https://github.com/drpepper56/blog#readme",
-  "description": "",
   "devDependencies": {
-    "@types/node": "^22.15.16"
+    "@types/node": "^22.15.16",
+    "typescript": "^5.8.3"
   },
   "dependencies": {
-    "typescript": "^5.8.3",
     "vite": "^6.3.5"
   }
 }
