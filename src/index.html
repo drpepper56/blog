@@ -11,18 +11,25 @@
     <div class="blog-container">
         <article class="blog-post">
             <h1 class="post-title">Google Data Analytics Capstone Project</h1>
-            <!-- <p class="post-meta">Published on May 12, 2023</p> -->
-            
+            <p class="post-meta">wip</p>
+
             <p class="post-intro">A walkthrough and rationale of steps taken in completing the capstone project for Google Data Analytics Certification on Coursera. Data was cleaned and transformed using R dplyr. Visualisations were made using Tableau. </p>
-            
-            <h2 class="post-subtitle">par1 title</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia est vitae quos rerum consectetur adipisci id doloremque nemo quisquam laudantium ex, deleniti dolore fuga, voluptates unde illum ad, nostrum nam?</p>
-            
-            <h2 class="post-subtitle">par2 title</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos numquam eos qui id, odit ullam. Expedita repellendus beatae unde perspiciatis debitis minima aut ullam quo accusantium quod! Corporis, eligendi hic.</p>
-            
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus omnis repellat in obcaecati nihil voluptate enim cupiditate ducimus eveniet tempora. Facilis totam voluptates et quia, aliquid vitae laborum dolor mollitia.</p>
-        </article>
+
+            <p>The dataset used for this project is from a urban bike renting company from Chicago, it only includes records of trips taken and the attributes do not hold any user information.
+                Loading the huge data set from separate csv files to one data frame in R was done using a recursive function that took a list of files and returned the data frame.</p>
+
+            <p>Missing values were found in columns that describe the start and end station name and ID number, station longitude and latitude.</p>
+
+            <p>The coordinate values had various number of significant figures after the decimal point, considering this, to make it easier to work on the each individual, they were split into latitude and longitude fields. Records with missing names or IDs of stations were given the values of records with only very close coordinate matches. The same was done in reverse, giving coordinate values to fields with matching name and ID of a station. Coordinate values slightly varied in groups of matching station name and ID so the coordinate values were served based on the mode from the group.
+            </p>
+            <p>Data Inconsistencies were found in the names and ID values of stations. Mismatched name and value pairs
+            </p>
+            <p>All names were trimmed of spaces, prefixed and suffixes in names like “Temp” or “Public Rack” where removed if the same ID was found without the extra text. In some cases the names prefixed with “Public Rack” had the same IDs but a different group of coordinate values, making their difference valid, the IDs from that group were prefixed with PR to preserve that data. After that there were 8 inconsistencies left, some had unique suffixes that were removed, random numbers were replaced with matching ID names and the “true” inconsistencies left were fixed by adding a D prefix to the ID value of the group with less entries.
+            </p>
+            <p>ID inconsistencies were easily fixed after the previous step by assigning the majority ID value to the whole group.
+            </p>
+
+            </article>
     </div>
 </body>
 </html>
