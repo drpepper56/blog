@@ -36,6 +36,12 @@
             </p>
 
             <p class="post-subtitle">Outlier Removal</p>
+            <p>Outlier values could only happen in numerical fields for distance, time and speed. 
+            </p>
+            <p>Trips with duration over 90’000 seconds and under 7 seconds were found to stand out in the density distribution graphs and lasted longer than a day, they were removed. 
+                A few trips with over 50 kilometres were in a group with around 9’800 kilometre values, they were removed. 
+                Speed was analysed separately for electrical and regular bikes, but no lowest speed limit was set, electric bike trip speed was capped at 9 meter per second and 8 meters per second for regular bikes, Most of these limit values were found by looking at the shape of distribution graphs and identifying the point after which the number of trips didn’t follow the distribution curve or dropped significantly.</p>
+            
 
             </article>
     </div>
