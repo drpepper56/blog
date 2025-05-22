@@ -37,6 +37,17 @@ body {
   margin-bottom: 30px;
 }
 
+.post-qr-description {
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+}
+.post-qr-code-image {
+  text-align: center;
+  margin: 0;
+}
+
 .post-intro {
   font-size: 1.2rem;
   color: #444;
