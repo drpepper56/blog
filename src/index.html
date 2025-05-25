@@ -43,6 +43,20 @@
             </p>
             <p>Name tags can be changed when clicking on them on the details page, if no name tag is set, a default blue text will let the user know they can set it.
             </p>
+
+            <p class="post-subtitle-with-link">Server</p>
+            <a href="https://github.com/drpepper56/teletrack-server" target="_blank" class="post-subtitle-link">github repository</a>
+            <p>The server is written in rust using Actix Web package to run the server, records and tracking data is stored on Atlas MongoDB, the tracking data is obtained from 17Track API endpoint.
+                Heroku is used for hosting the server and the client static content.
+            </p>
+            <p>All API calls are managed from a separate file trackingapi.rs, the API uses HTTPS requests for communication, the data is received in the response JSON body. Responses from the API are processed in trackingapi.rs to make it simple in the main.rs. Error responses are converted into a custom Error enum based on the API error codes and context, success responses return the JSON as a structure.
+            </p>
+            <p>Data about users stored on the database is their telegram ID, hashed telegram ID and the tracking quota remaining, set to 4 when creating a user.
+                The API has different data structured for the response JSON depending on the request, tracking data stored in the database is formatted to only have relevant information.
+            </p>
+            <p>Updates are delivered to users through the telegram bot, which they work like text messages, the user gets a push notification on their phone, and they can open the notification in the bot chat window. The system is limited in what it allows in the body, the most that can be sent is a message to the user and a tracking number parameter to the client so it can request the tracking data.
+            </p>
+
             
         </article>
 
