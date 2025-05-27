@@ -79,7 +79,7 @@
 
             <p class="post-subtitle">Cleaning and Transformation</p>
             <p>Missing values were found in columns that describe the start and end station name and ID number, station longitude and latitude.</p>
-            <p>The coordinate values had various number of significant figures after the decimal point, considering this, to make it easier to work on the each individual, they were split into latitude and longitude fields. Records with missing names or IDs of stations were given the values of records with only very close coordinate matches. The same was done in reverse, giving coordinate values to fields with matching name and ID of a station. Coordinate values slightly varied in groups of matching station name and ID so the coordinate values were served based on the mode from the group.
+            <p>The coordinate values had various numbers of significant figures after the decimal point, considering this, to make it easier to work on each individually, they were split into latitude and longitude fields. Records with missing names or IDs of stations were given the values of records with very close coordinate matches (at least 5 significant figures). The same was done in reverse, giving coordinate values to fields with matching name and ID of a station. Coordinate values slightly varied in groups of matching station name and ID so the coordinate values were served based on the mode from the group.
             </p>
             <p>Data Inconsistencies were found in the names and ID values of stations. Mismatched name and value pairs
             </p>
