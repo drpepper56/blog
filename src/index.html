@@ -78,7 +78,7 @@
                 Loading the huge data set from separate csv files to one data frame in R was done using a recursive function that took a list of files and returned the data frame.</p>
 
             <p class="post-subtitle">Cleaning and Transformation</p>
-            <p>Data Inconsistencies were found in the names and ID values of stations. Mismatched name and value pairs
+            <p>Data Inconsistencies were found in the names and ID values of stations.
             </p>
             <p>All names were trimmed of spaces, prefixes and suffixes in names, “Temp” or “Public Rack” where removed if the same ID was found without the extra text. In some cases the names prefixed with “Public Rack” had the same IDs but a different group of coordinate values, making their difference valid, the IDs from that group were prefixed with PR to preserve that data. After that there were 8 inconsistencies left, some had unique suffixes that were removed, random numbers were replaced with matching IDs. The remaining conflicting stations that had the same ID but were different were fixed by adding a D prefix to the ID value of the group with less entries. ID inconsistencies were easily fixed after the previous step by assigning the majority ID value to the whole group.
             </p>
