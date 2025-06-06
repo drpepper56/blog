@@ -78,20 +78,19 @@
                 Loading the huge data set from separate csv files to one data frame in R was done using a recursive function that took a list of files and returned the data frame.</p>
 
             <p class="post-subtitle">Cleaning and Transformation</p>
-            <p>Missing values were found in columns that describe the start and end station name and ID number, station longitude and latitude.</p>
-            <p>The coordinate values had various numbers of significant figures after the decimal point, considering this, to make it easier to work on each individually, they were split into latitude and longitude fields. Records with missing names or IDs of stations were given the values of records with very close coordinate matches (at least 5 significant figures). The same was done in reverse, giving coordinate values to fields with matching name and ID of a station. Coordinate values slightly varied in groups of matching station name and ID so the coordinate values were served based on the mode from the group.
-            </p>
             <p>Data Inconsistencies were found in the names and ID values of stations. Mismatched name and value pairs
             </p>
-            <p>All names were trimmed of spaces, prefixes and suffixes in names, “Temp” or “Public Rack” where removed if the same ID was found without the extra text. In some cases the names prefixed with “Public Rack” had the same IDs but a different group of coordinate values, making their difference valid, the IDs from that group were prefixed with PR to preserve that data. After that there were 8 inconsistencies left, some had unique suffixes that were removed, random numbers were replaced with matching IDs. The remaining conflicting stations that had the same ID but were different were fixed by adding a D prefix to the ID value of the group with less entries.
+            <p>All names were trimmed of spaces, prefixes and suffixes in names, “Temp” or “Public Rack” where removed if the same ID was found without the extra text. In some cases the names prefixed with “Public Rack” had the same IDs but a different group of coordinate values, making their difference valid, the IDs from that group were prefixed with PR to preserve that data. After that there were 8 inconsistencies left, some had unique suffixes that were removed, random numbers were replaced with matching IDs. The remaining conflicting stations that had the same ID but were different were fixed by adding a D prefix to the ID value of the group with less entries. ID inconsistencies were easily fixed after the previous step by assigning the majority ID value to the whole group.
             </p>
-            <p>ID inconsistencies were easily fixed after the previous step by assigning the majority ID value to the whole group.
+            <p>Missing values were found in columns that describe the start and end station name and ID number, station longitude and latitude.
             </p>
-            <p>The combined field was split into separate time and date field to make it easier to work on. Records that had missing time or date or start time recorded chronological after the end date, were removed. A field for trip duration was added
+            <p>Four significant figures after the decimal point was chosen as the minimum for an accurate value for latitude and longitude, which is around 11 meters error margin, this didn’t expand the already existing error margin of records showing different coordinates for the same station, which was up to 60 meters in some tested cases. Records with missing names or IDs of stations were given the values of records with very accurate coordinate matches. This didn’t make any change.The same was done in reverse, giving coordinate values to fields with matching name and ID of a station, and a few end station coordinates were filled in.
+            </p>
+            <p>The combined time field was split into separate time and date field to make it easier to work on. Records that had missing time or date or start time recorded chronological after the end date, were removed. A field for trip duration was added
             </p>
             <p>Where the coordinates were accurate enough a distance field was added, otherwise it was set to NA. Records with distance zero and both start and end station set and different to each other were removed.
             </p>
-            <p>Added a field to hold the average speed of the trip by dividing the trip distance by the trip time.
+            <p>From the distance and time fields, a field was created for the trip’s average speed.
             </p>
 
             <p class="post-subtitle">Outlier Removal</p>
