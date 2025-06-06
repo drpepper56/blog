@@ -83,7 +83,7 @@
             </p>
             <p>Data Inconsistencies were found in the names and ID values of stations. Mismatched name and value pairs
             </p>
-            <p>All names were trimmed of spaces, prefixed and suffixes in names like “Temp” or “Public Rack” where removed if the same ID was found without the extra text. In some cases the names prefixed with “Public Rack” had the same IDs but a different group of coordinate values, making their difference valid, the IDs from that group were prefixed with PR to preserve that data. After that there were 8 inconsistencies left, some had unique suffixes that were removed, random numbers were replaced with matching ID names and the “true” inconsistencies left were fixed by adding a D prefix to the ID value of the group with less entries.
+            <p>All names were trimmed of spaces, prefixes and suffixes in names, “Temp” or “Public Rack” where removed if the same ID was found without the extra text. In some cases the names prefixed with “Public Rack” had the same IDs but a different group of coordinate values, making their difference valid, the IDs from that group were prefixed with PR to preserve that data. After that there were 8 inconsistencies left, some had unique suffixes that were removed, random numbers were replaced with matching IDs. The remaining conflicting stations that had the same ID but were different were fixed by adding a D prefix to the ID value of the group with less entries.
             </p>
             <p>ID inconsistencies were easily fixed after the previous step by assigning the majority ID value to the whole group.
             </p>
@@ -107,6 +107,13 @@
             <p>Most of these limit values were found by looking at the shape of distribution graphs and identifying the point after which the number of trips didn’t follow the distribution curve or dropped significantly.</p>
 
             <p class="post-subtitle">Data Analytics</p>
+            <p>
+                In the final complete set there are missing values in trip duration, distance and speed, and in the start and end station name and ID.
+The set with any station missing has a massive difference of electric bike to classical bike trips, 852 thousand to 1.4 thousand for members and 517 thousand to 4.5 thousand for casual users.
+The set with no missing station, but missing values in duration, distance and speed has this difference the other way, with non-electric bikes being in the majority with 67 thousand to 0.2 thousand for members and 99 thousand to 0.1 thousand for casual users.
+
+I don’t know what caused this, but the bias can influence the data and there need to be some precautions set when choosing the set for analysis on these values.
+            </p>
         </article>
     </div>
 </body>
