@@ -44,6 +44,8 @@ body {
   margin-bottom: 3px;
 }
 .post-qr-code-image {
+  max-width: 30%; 
+  height: auto;
   text-align: center;
   margin: 0;
 }
@@ -80,6 +82,14 @@ body {
 }
 
 .post-graph-image {
+  max-width: 30%;
+  height: auto;
+  text-align: center;
+  margin: 0;
+}
+.post-graph-image-two-column {
+  max-width: 30%;
+  height: auto;
   text-align: center;
   margin: 0;
 }
