@@ -44,10 +44,12 @@ body {
   margin-bottom: 3px;
 }
 .post-qr-code-image {
-  max-width: 30%; 
-  height: auto;
   text-align: center;
   margin: 0;
+}
+.qr-image {
+  max-width: 30%; 
+  height: auto;
 }
 
 .post-intro {
@@ -82,17 +84,18 @@ body {
 }
 
 .post-graph-image {
+  text-align: center;
+  margin: 0;
+}
+.image-graph {
   max-width: 50%;
   height: auto;
-  text-align: center;
-  margin: 0;
 }
-.post-graph-image-two-column {
+.image-graph-two-column {
   max-width: 40%;
   height: auto;
-  text-align: center;
-  margin: 0;
 }
+
 
 p {
   margin-bottom: 20px;
