@@ -88,11 +88,11 @@ body {
   margin: 0;
 }
 .image-graph {
-  max-width: 70%;
+  max-width: 100%;
   height: auto;
 }
 .image-graph-two-column {
-  max-width: 45%;
+  max-width: 49%;
   height: auto;
 }
 
