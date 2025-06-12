@@ -82,13 +82,13 @@ body {
 }
 
 .post-graph-image {
-  max-width: 30%;
+  max-width: 50%;
   height: auto;
   text-align: center;
   margin: 0;
 }
 .post-graph-image-two-column {
-  max-width: 30%;
+  max-width: 40%;
   height: auto;
   text-align: center;
   margin: 0;
