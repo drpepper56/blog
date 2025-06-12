@@ -84,7 +84,8 @@ p {
   color: #555;
 }
 .indented-par {
-  margin-left: 4px;
+  margin-bottom: 15px;
+  margin-left: 7px;
 }
 
 /* Responsive Design */
