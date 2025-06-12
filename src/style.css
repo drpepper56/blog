@@ -79,6 +79,11 @@ body {
   text-decoration: none;
 }
 
+.post-graph-image {
+  text-align: center;
+  margin: 0;
+}
+
 p {
   margin-bottom: 20px;
   color: #555;
