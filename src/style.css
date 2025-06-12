@@ -90,6 +90,7 @@ p {
 }
 .indented-p {
   margin-bottom: 8px;
+  margin-top: 0;
   margin-left: 7px;
 }
 
