@@ -51,10 +51,9 @@
             </p>
             <p>All API calls are managed from a separate file trackingapi.rs, the API uses HTTPS requests for communication, the data is received in the response JSON body. Responses from the API are processed in trackingapi.rs to make it simple in the main.rs. Error responses are converted into a custom Error enum based on the API error codes and context, success responses return the JSON as a structure.
             </p>
-            <p>Data about users stored on the database is their telegram ID, hashed telegram ID and the tracking quota remaining, set to 4 when creating a user.
-                The API has different data structured for the response JSON depending on the request, tracking data stored in the database is formatted to only have relevant information.
+            <p>Data about users stored on the database is their telegram ID, hashed telegram ID and the tracking quota remaining, set to 4 when creating a user. The API has different data structures for the response JSON depending on the request, tracking data stored in the database is formatted to only have relevant information.
             </p>
-            <p>Updates are delivered to users through the telegram bot, which they work like text messages, the user gets a push notification on their phone, and they can open the notification in the bot chat window. The system is limited in what it allows in the body, the most that can be sent is a message to the user and a tracking number parameter to the client so it can request the tracking data.
+            <p>Updates are delivered to users through the telegram bot, which work like text messages, the user gets a push notification on their phone, and they can open the notification in the bot chat window. The system is limited in what it allows in the body, the most that can be sent is a message to the user and a tracking number parameter to the client so it can request the tracking data.
             </p>
 
             <p class="post-subtitle">Ideas for further development</p>
